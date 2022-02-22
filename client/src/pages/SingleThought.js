@@ -8,7 +8,7 @@ const SingleThought = props => {
   const { id: thoughtId } = useParams();
 
   const { loading, data } = useQuery(QUERY_THOUGHT, {
-    variables: { id }
+    variables: { id : thoughtId }
   });
   
   const thought = data?.thought || {};
